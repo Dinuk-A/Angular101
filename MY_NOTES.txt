@@ -1,0 +1,19 @@
+GENERATE COMPONENTS 
+ng g c name OR ng generate component name
+
+TO GENERATE INSIDE A FOLDER
+ng g c components/header
+
+inside angular.json > following are removed >
+ "inlineTemplate": true,
+"inlineStyle": true,
+
+original block : "schematics": {
+        "@schematics/angular:component": {
+          "inlineTemplate": true,
+          "inlineStyle": true,
+          "style": "scss"
+        }
+      },
+
+REASON: it will create new components with HTML and scss versions too
