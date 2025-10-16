@@ -6,11 +6,15 @@ import { RouterOutlet } from '@angular/router';
   imports: [RouterOutlet],
   template: `
     <h1>Welcome to {{ title() }}!</h1>
-
+    <p>Hello World</p>
     <router-outlet />
   `,
-  styles: [],
+  styles: [`
+  p{
+    background-color: green;
+  }
+  `],
 })
 export class App {
-  protected readonly title = signal('my-ng-app');
+  protected readonly title = signal("Dinuka's Angular App");
 }
