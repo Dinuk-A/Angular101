@@ -30,3 +30,10 @@ REASON: it will create new components with HTML and scss versions too
 ***************ANGULAR DATA BINDING*************
 binding data between the typescript class and the related component's inlineTemplate
 we use signals
+
+
+***************ROUTING*************
+Angular is a single page app. but using routes we can make a multi page app that user can navigate
+browser can only load the JS bundle that relate to the current loaded page (including parents)
+
+to handle routes=> app.routes.ts 
