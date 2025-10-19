@@ -37,3 +37,5 @@ Angular is a single page app. but using routes we can make a multi page app that
 browser can only load the JS bundle that relate to the current loaded page (including parents)
 
 to handle routes=> app.routes.ts 
+
+to load the new component without reloading the entire page(works as a link) >> use 'routerlink'

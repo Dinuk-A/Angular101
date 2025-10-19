@@ -2,9 +2,15 @@
 
 <header>
     <nav>
-     {{title()}}
+        <span routerLink="/">{{title()}}</span>
+
+        <ul>
+            <li routerLink="/todos">To Do s</li>
+        </ul>
+
     </nav>
 
     <!-- in here we dont use ()s, not a function -->
     {{sec_title}}
+
 </header>
