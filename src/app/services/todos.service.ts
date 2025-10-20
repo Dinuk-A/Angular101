@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Todo } from '../model/todo.type';
+import { TodoModel } from '../model/todo.type';
 
 /*following code means this service will be available and can be 
 accessed throughout the application in any component or other service.
@@ -13,7 +13,7 @@ if we want this inside only specific module > remove following code and add this
 export class TodosService {
 
   // defining an array of Todo type
-  todoItems: Array<Todo> = [
+  todoItems: Array<TodoModel> = [
 
     {
       id: 0,

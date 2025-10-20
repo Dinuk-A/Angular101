@@ -1,6 +1,6 @@
 //this is manually created file
 
-export type Todo = {
+export type TodoModel = {
     userId: number;
     completed: boolean;
     title: string;
