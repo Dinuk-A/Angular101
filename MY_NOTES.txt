@@ -39,3 +39,8 @@ browser can only load the JS bundle that relate to the current loaded page (incl
 to handle routes=> app.routes.ts 
 
 to load the new component without reloading the entire page(works as a link) >> use 'routerlink'
+
+*************** ANGULAR SERVICES *************
+used to encapsulate data,making HTTP calls, or any task that is not directly related to rendering UIs
+
+how to add>>> ng g service services/todos
