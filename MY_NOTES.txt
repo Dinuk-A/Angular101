@@ -44,3 +44,6 @@ to load the new component without reloading the entire page(works as a link) >> 
 used to encapsulate data,making HTTP calls, or any task that is not directly related to rendering UIs
 
 how to add>>> ng g service services/todos
+
+making HTTP calls with angular services > to call external services >> 
+ we need to add the provideHttpClient in app.config.ts Providers array

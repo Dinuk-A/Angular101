@@ -1,5 +1,6 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { TodoModel } from '../model/todo.type';
+import { HttpClient } from '@angular/common/http';
 
 /*following code means this service will be available and can be 
 accessed throughout the application in any component or other service.
@@ -12,8 +13,13 @@ if we want this inside only specific module > remove following code and add this
 
 export class TodosService {
 
+  //before doing that we need to add the provideHttpClient in app.config.ts Providers array
+  //to get access to http services (get,post,put...etc)
+  http = inject(HttpClient)
+  
+  //for manual todos (ang service ex 1)
   // defining an array of Todo type
-  todoItems: Array<TodoModel> = [
+  todoItemsManual: Array<TodoModel> = [
 
     {
       id: 0,
@@ -27,8 +33,14 @@ export class TodosService {
       completed: false,
       userId: 1
     }
-    
+
   ]
+
+  //for todos from net (for http request ex)
+  getToDosFromNet(){
+    const url = 'https://jsonplaceholder.typicode.com/todos'
+    return this.http.get<Array<TodoModel>>(url);
+  }
 
 
 }
