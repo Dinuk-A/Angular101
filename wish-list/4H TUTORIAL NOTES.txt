@@ -22,3 +22,16 @@ material UI is from Google
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ]
 4. stop server and start again > ng serve 
+
+
+################### for loops in NG ###################
+instead of manually displaying all the items in an array, use a angular for loop
+type '*' inside a div we need to start
+works same as attributes > *ngFor=""
+its called a directive, specially a STRUCTUAL DIRECTIVE = it changes the str of DOM 
+remember to import > import { CommonModule } from '@angular/common';  in app.ts 
+and inside @Component >  imports: [CommonModule,RouterOutlet],
+
+as of 2025, using ngFor is deprecated
+
+
