@@ -1,0 +1,8 @@
+install by npm install -g @angular/cli
+check version by  ng --version
+
+create first app > ng new app-name
+or ng new my-ng-app --inline-style --inline-template >>> to learn step by step
+choose options>  NO to SSR and ZONE.JS
+
+to run > npm start

@@ -1,0 +1,15 @@
+<p>home works!</p>
+
+<!-- passing from parent -->
+<app-greeting [message]="msgFromHome()"></app-greeting>
+
+<!-- fn is defined in the ts file -->
+<label for="">first input</label>
+<input type="text" (keyup)="keyUpHandler()">
+<br>
+<label for="">new input</label>
+<input type="text" (keyup)="keyUpHandlerWithEvent($event)">
+
+<!-- counter section -->
+<label for="">counter section</label>
+<app-counter></app-counter>

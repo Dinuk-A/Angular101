@@ -1,0 +1,72 @@
+install by npm install -g @angular/cli
+check version by  ng --version
+
+create first app > ng new app-name
+or ng new my-ng-app --inline-style --inline-template >>> to learn step by step
+choose options>  NO to SSR and ZONE.JS
+
+to run > npm start
+
+GENERATE COMPONENTS 
+ng g c name OR ng generate component name
+
+TO GENERATE INSIDE A FOLDER
+ng g c components/header
+
+inside angular.json > following are removed >
+ "inlineTemplate": true,
+"inlineStyle": true,
+
+original block : "schematics": {
+        "@schematics/angular:component": {
+          "inlineTemplate": true,
+          "inlineStyle": true,
+          "style": "scss"
+        }
+      },
+
+REASON: it will create new components with HTML and scss versions too
+
+***************ANGULAR DATA BINDING*************
+binding data between the typescript class and the related component's inlineTemplate
+we use signals
+
+
+***************ROUTING*************
+Angular is a single page app. but using routes we can make a multi page app that user can navigate
+browser can only load the JS bundle that relate to the current loaded page (including parents)
+
+to handle routes=> app.routes.ts 
+
+to load the new component without reloading the entire page(works as a link) >> use 'routerlink'
+
+*************** ANGULAR SERVICES *************
+used to encapsulate data,making HTTP calls, or any task that is not directly related to rendering UIs
+
+how to add>>> ng g service services/todos
+
+making HTTP calls with angular services > to call external services >> 
+ we need to add the provideHttpClient in app.config.ts Providers array
+
+*************** ANGULAR DIRECTIVES *************
+add additional behavious to elements(html elements,components, etc) in ng app
+create > ng g directive name
+
+*************** ANGULAR PIPES *************
+transform data inside the template
+built-in pipes: uppercase, currency, date, etc
+
+we can create custom pipes
+ng g pipe name
+
+
+
+
+
+
+
+
+
+
+control flow blocks???
+@for, @if, etc

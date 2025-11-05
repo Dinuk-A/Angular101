@@ -1,0 +1,20 @@
+<p>todos works!</p>
+
+<label for="">First Item; </label>
+<p>{{todoItemsSignal()[0].title}}</p>
+
+<!-- run a loop with angular in built for method -->
+<label for="">Manual todos as a loop</label>
+@for (todo of todoItemsSignal(); track todo.id) {
+    <p>{{todo.title}}</p>
+}
+
+<hr>
+
+<label for="">todos from API as a loop</label>
+@for(todoNet of todoItemsFromNetSignal(); track todoNet.id){
+    <p>{{todoNet.title}}</p>
+}
+
+<!-- originally tracking $index (track $index) (the unique thing for all loop items)  -->
+<!-- but we also can track by todo's id -->

@@ -1,0 +1,7 @@
+install angular CLI globally  >   npm install @angular/cli --g
+
+create a new project   >   ng new app-name-goes-here
+answers to optional questions > rorting = default NO, styles = CSS
+cd into that newe folder
+
+to start app , in cmd > 1. ng serve 
