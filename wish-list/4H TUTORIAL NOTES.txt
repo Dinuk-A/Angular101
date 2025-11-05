@@ -5,3 +5,20 @@ answers to optional questions > rorting = default NO, styles = CSS
 cd into that newe folder
 
 to start app , in cmd > 1. ng serve 
+
+no definite structure for folder structure
+
+material UI is from Google
+
+##################### install bootstrap####################
+1. in root folder> npm install bootstrap
+2. verify that the bootstrap folder is exist
+3. add followinh under 'build' section of angular.json file >>>
+    "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css"
+            ],
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
+4. stop server and start again > ng serve 
