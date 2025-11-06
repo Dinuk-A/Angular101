@@ -33,8 +33,26 @@ remember to import > import { CommonModule } from '@angular/common';  in app.ts
 and inside @Component >  imports: [CommonModule,RouterOutlet],
 
 as of 2025, using ngFor is deprecated 
-instead use @for 
+instead use @for  (continuing these syntaxes from now)
 
 if we commented the items in app.ts this will give an error (then its an array of 'never' objects)
+
+in new version when we use @if we dont need to use <ng-template>   (37.00)
+
+we cant have 2 structual directive on the same element(inside same <>)
+
+@########################bind data@#########################
+<input type="checkbox" class="checkbox" [checked]="wish.isDone"> 
+this wont show in the DOM as 'checked' , but show in UI
+
+adding a data index attribute > same way,but use a prefix [attr.attr name]s
+ [attr.data-index]="ii">
+
+@########################bind events@#########################
+<input (click)="toggleItem()" ,,,,
+the function will be written in app.ts... 
+we can add a function in the same line of html
+
+
 
 

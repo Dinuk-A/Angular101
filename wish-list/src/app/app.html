@@ -1,21 +1,36 @@
 <body class="bg-dark text-white min-vh-100">
   <div class="container border border-primary ">
 
+    <!-- condition ✅-->
     @if (items.length == 0) {
     <div class="text-danger"> no wishes to display</div>
     }
 
     @else { <ul class="wish-list">
 
-      <!-- ADD LI ITEMS FOR EACH ITEM  -->
-      @for (wish of items; track $index) {
+      <!-- ADD LI ITEMS FOR EACH ITEM ✅ -->
+      <!-- let ii = $index part is optional, just to make it easier by making a var -->
+      @for (wish of items; track $index; let ii = $index) {
 
       <li>
         <div class="form-check">
-          <label for="" class="form-check-label">
-            <input type="checkbox" class="checkbox">
-            {{wish.wishText}}
-          </label>
+
+          <!--  way 1 ✅ -->
+          <!--@if (wish.isDone) {<input type="checkbox" class="checkbox" checked>}
+          @else { <input type="checkbox" class="checkbox"> }
+          <span class="ms-2"> {{wish.wishText}} </span>-->
+
+          <!-- use the index's var -->
+          <span class="mx-1">{{ii+1}}</span>
+
+          <!-- way 2 , use a JS property inside html ✅-->
+          <!--<input type="checkbox" class="checkbox ms-2" [checked]="wish.isDone" [attr.data-index]="ii">
+          <span class="ms-2"> {{wish.wishText}} </span>-->
+
+          <!-- event binding ✅-->
+          <input (click)="toggleItem($event, wish)" type="checkbox" class="checkbox ms-2" [checked]="wish.isDone" [attr.data-index]="ii">
+          <span class="ms-2"> {{wish.wishText}} </span>
+
         </div>
       </li>
 

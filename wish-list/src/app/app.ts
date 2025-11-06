@@ -11,6 +11,15 @@ import { CommonModule } from '@angular/common';
 })
 export class App {
 
+  //e here is from event, its optional, just to show lesson
+  toggleItem(e:any, wish:wishItem) {
+   console.log("clicked ", e);
+   wish.isDone = !wish.isDone;
+   console.log(wish);
+   
+   
+  }
+
   // Create an array of wishItem objects
   // first version, without any type
   //items  = [
