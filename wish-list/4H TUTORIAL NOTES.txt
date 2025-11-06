@@ -32,6 +32,9 @@ its called a directive, specially a STRUCTUAL DIRECTIVE = it changes the str of 
 remember to import > import { CommonModule } from '@angular/common';  in app.ts 
 and inside @Component >  imports: [CommonModule,RouterOutlet],
 
-as of 2025, using ngFor is deprecated
+as of 2025, using ngFor is deprecated 
+instead use @for 
+
+if we commented the items in app.ts this will give an error (then its an array of 'never' objects)
 
 

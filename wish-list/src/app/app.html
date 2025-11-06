@@ -1,18 +1,29 @@
 <body class="bg-dark text-white min-vh-100">
   <div class="container border border-primary ">
 
-    <ul class="wish-list">
-      
+    @if (items.length == 0) {
+    <div class="text-danger"> no wishes to display</div>
+    }
+
+    @else { <ul class="wish-list">
+
       <!-- ADD LI ITEMS FOR EACH ITEM  -->
-      <li *ngFor="let wish of items">
+      @for (wish of items; track $index) {
+
+      <li>
         <div class="form-check">
           <label for="" class="form-check-label">
-            <input type="checkbox" class="checkbox" name="" id=""> {{wish.wishText}}
+            <input type="checkbox" class="checkbox">
+            {{wish.wishText}}
           </label>
         </div>
       </li>
 
-    </ul>
+      }
+
+    </ul>}
+
+
 
   </div>
 </body>
