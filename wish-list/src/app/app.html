@@ -1,24 +1,34 @@
 <body class="bg-dark text-white min-vh-100">
 
   <!-- form -->
-  
   <div class="container py-4">
-
     <form class="d-flex">
 
       <!-- must have a value for 'name' attribute -->
-      <input [(ngModel)]="newWishText" name="new-wish-text" type="text" class="form-control me-2" placeholder="Enter your wish" required>
-
+      <input [(ngModel)]="newWishText" name="new-wish-text" type="text" class="form-control me-2"
+        placeholder="Enter your wish" required>
       <button (click)="$event.preventDefault(); addNewWish();" type="submit" class="btn btn-primary">Add Wish</button>
 
     </form>
+  </div>
+
+  <!-- a select box to filyer (all, fullfilled, unfulfilled) -->
+  <div class="container py-4">
+
+    <label for="filter-select" class="form-label">Filter wishes:</label>
+    <!-- this isnt the typical event, this contains the new value(when user selects) of the model too -->
+    <select [(ngModel)]="listFilter" (ngModelChange)="setFilter($event)" id="filter-select" class="form-select w-auto">
+      <option value="all">All</option>
+      <option value="fulfilled">Fulfilled</option>
+      <option value="unfulfilled">Unfulfilled</option>
+    </select>
   </div>
 
   <!-- wish list -->
   <div class="pt-4 container border border-primary ">
 
     <!-- condition ✅-->
-    @if (items.length == 0) {
+    @if (visibleItems.length == 0) {
     <div class="text-danger"> no wishes to display</div>
     }
 
@@ -26,7 +36,7 @@
 
       <!-- ADD LI ITEMS FOR EACH ITEM ✅ -->
       <!-- let ii = $index part is optional, just to make it easier by making a var -->
-      @for (wish of items; track $index; let ii = $index) {
+      @for (wish of visibleItems; track $index; let ii = $index) {
 
       <li>
         <div class="form-check">

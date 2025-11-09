@@ -29,8 +29,15 @@ export class App {
 
   protected readonly title = signal('wish-list');
 
-   // a new property
-   newWishText = '';
+  // a new property
+  newWishText = '';
+
+  //to filter
+  //default is all (value in option tag)
+  listFilter: string = 'all';
+
+  //new array, initially a copy of items
+  visibleItems: wishItem[] = this.items;
 
   //add a new wish to array
   addNewWish() {
@@ -44,7 +51,20 @@ export class App {
 
     //clear out the value of property
     this.newWishText = '';
-    
+
+  }
+
+  setFilter(value: any) {
+    console.log("Filter set to ", value);
+
+    if (value === 'all') {
+      this.visibleItems = this.items;
+    } else if (value === 'fulfilled') {
+      this.visibleItems = this.items.filter(i => i.isDone)
+    } else {
+      this.visibleItems = this.items.filter(i => !i.isDone)
+    }
+
   }
 
   //e here is from event, its optional, just to show lesson

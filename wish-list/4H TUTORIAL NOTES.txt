@@ -58,7 +58,7 @@ we can add a function in the same line of html
 1. reactive forms = more scalable, but need setup
 2. template driven forms (in this lesson)
 
-ngmodal = a field that we can bind to a property of our class
+ngmodal = a field that we can bind to a property of our class(component)
 input tag's name attribute must have a value
 import { FormsModule } from '@angular/forms'; in app.ts and inside Component> imports: [CommonModule, RouterOutlet, FormsModule],
 
