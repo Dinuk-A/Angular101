@@ -1,5 +1,21 @@
 <body class="bg-dark text-white min-vh-100">
-  <div class="container border border-primary ">
+
+  <!-- form -->
+  
+  <div class="container py-4">
+
+    <form class="d-flex">
+
+      <!-- must have a value for 'name' attribute -->
+      <input [(ngModel)]="newWishText" name="new-wish-text" type="text" class="form-control me-2" placeholder="Enter your wish" required>
+
+      <button (click)="$event.preventDefault(); addNewWish();" type="submit" class="btn btn-primary">Add Wish</button>
+
+    </form>
+  </div>
+
+  <!-- wish list -->
+  <div class="pt-4 container border border-primary ">
 
     <!-- condition ✅-->
     @if (items.length == 0) {
@@ -28,7 +44,8 @@
           <span class="ms-2"> {{wish.wishText}} </span>-->
 
           <!-- event binding ✅-->
-          <input (click)="toggleItem($event, wish)" type="checkbox" class="checkbox ms-2" [checked]="wish.isDone" [attr.data-index]="ii">
+          <input (click)="toggleItem($event, wish)" type="checkbox" class="checkbox ms-2" [checked]="wish.isDone"
+            [attr.data-index]="ii">
           <span class="ms-2"> {{wish.wishText}} </span>
 
         </div>

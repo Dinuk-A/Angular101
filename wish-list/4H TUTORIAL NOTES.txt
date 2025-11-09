@@ -53,6 +53,18 @@ adding a data index attribute > same way,but use a prefix [attr.attr name]s
 the function will be written in app.ts... 
 we can add a function in the same line of html
 
+@########################forms@#########################
+2 diff wways to work with
+1. reactive forms = more scalable, but need setup
+2. template driven forms (in this lesson)
+
+ngmodal = a field that we can bind to a property of our class
+input tag's name attribute must have a value
+import { FormsModule } from '@angular/forms'; in app.ts and inside Component> imports: [CommonModule, RouterOutlet, FormsModule],
+
+
+
+
 
 
 
