@@ -36,8 +36,27 @@ export class App {
   //default is all (value in option tag)
   listFilter: string = 'all';
 
+  //first version
   //new array, initially a copy of items
-  visibleItems: wishItem[] = this.items;
+  //visibleItems: wishItem[] = this.items;
+
+  //2nd version as a getter
+  //to react any change to the original items array (or objects inside it)
+  //this is from js, not in angular
+  //this will return an array
+  get visibleItems(): wishItem[] {
+
+    let value = this.listFilter;
+
+    if (value === 'all') {
+      return this.items;
+    } else if (value === 'fulfilled') {
+      return this.items.filter(i => i.isDone)
+    } else {
+      return this.items.filter(i => !i.isDone)
+    }
+  }
+  //with above modification we dont need ngmodelchange method anymore(setFilter)
 
   //add a new wish to array
   addNewWish() {
@@ -54,18 +73,20 @@ export class App {
 
   }
 
-  setFilter(value: any) {
-    console.log("Filter set to ", value);
-
-    if (value === 'all') {
-      this.visibleItems = this.items;
-    } else if (value === 'fulfilled') {
-      this.visibleItems = this.items.filter(i => i.isDone)
-    } else {
-      this.visibleItems = this.items.filter(i => !i.isDone)
-    }
-
-  }
+  // this is not needed anymore with the getter version of visibleItems
+  //remove in the html also
+//  setFilter(value: any) {
+//    console.log("Filter set to ", value);
+//
+//    if (value === 'all') {
+//      this.visibleItems = this.items;
+//    } else if (value === 'fulfilled') {
+//      this.visibleItems = this.items.filter(i => i.isDone)
+//    } else {
+//      this.visibleItems = this.items.filter(i => !i.isDone)
+//    }
+//
+//  }
 
   //e here is from event, its optional, just to show lesson
   toggleItem(e: any, wish: wishItem) {

@@ -16,8 +16,10 @@
   <div class="container py-4">
 
     <label for="filter-select" class="form-label">Filter wishes:</label>
-    <!-- this isnt the typical event, this contains the new value(when user selects) of the model too -->
-    <select [(ngModel)]="listFilter" (ngModelChange)="setFilter($event)" id="filter-select" class="form-select w-auto">
+    <!-- this isnt the typical event in setFilter(), this contains the new value(when user selects) of the model too -->
+    <!-- removed for 2nd method -->
+    <!--<select [(ngModel)]="listFilter" (ngModelChange)="setFilter($event)" id="filter-select" class="form-select w-auto">-->
+    <select [(ngModel)]="listFilter" id="filter-select" class="form-select w-auto">
       <option value="all">All</option>
       <option value="fulfilled">Fulfilled</option>
       <option value="unfulfilled">Unfulfilled</option>
