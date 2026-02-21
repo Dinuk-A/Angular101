@@ -8,3 +8,5 @@ export class wishItem {
    
 
 }
+
+// this class then will be imported in app.ts

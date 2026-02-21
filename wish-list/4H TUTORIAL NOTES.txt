@@ -14,6 +14,11 @@ no definite structure for folder structure
 
 material UI is from Google
 
+##################### CREATING A DATA MODAL #######################
+no definite structure for folder structure
+
+classes will be made inside shared/modules bcz they will be used in many places inside the app
+
 ##################### install bootstrap####################
 1. in root folder> npm install bootstrap
 2. verify that the bootstrap folder is exist
@@ -67,6 +72,16 @@ input tag's name attribute must have a value
 import { FormsModule } from '@angular/forms'; in app.ts and inside Component> imports: [CommonModule, RouterOutlet, FormsModule],
 
 
+########################creating a component with input@#########################
+1.20.00
+ng generate component name-here
+ng generate component wish-list-comp
+
+remove 'app' from >
+ @Component({
+  selector: 'app-wish-list-comp', 
+  
+  in wish-list.comp.ts
 
 
 

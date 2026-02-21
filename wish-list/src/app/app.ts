@@ -13,6 +13,8 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
+
+//this is the app component
 export class App {
 
   // Create an array of wishItem objects
@@ -23,7 +25,7 @@ export class App {
   //  new wishItem('Go to mars')
   //]
 
-  //second version
+  //second version, same array with the type wishItem( we could use 'any' but not a good practice) 
   items: wishItem[] = [
     new wishItem('Learn Angular'),
     new wishItem('Drink coffee', true),
@@ -78,18 +80,18 @@ export class App {
 
   // this is not needed anymore with the getter version of visibleItems
   //remove in the html also
-//  setFilter(value: any) {
-//    console.log("Filter set to ", value);
-//
-//    if (value === 'all') {
-//      this.visibleItems = this.items;
-//    } else if (value === 'fulfilled') {
-//      this.visibleItems = this.items.filter(i => i.isDone)
-//    } else {
-//      this.visibleItems = this.items.filter(i => !i.isDone)
-//    }
-//
-//  }
+  //  setFilter(value: any) {
+  //    console.log("Filter set to ", value);
+  //
+  //    if (value === 'all') {
+  //      this.visibleItems = this.items;
+  //    } else if (value === 'fulfilled') {
+  //      this.visibleItems = this.items.filter(i => i.isDone)
+  //    } else {
+  //      this.visibleItems = this.items.filter(i => !i.isDone)
+  //    }
+  //
+  //  }
 
   //e here is from event, its optional, just to show lesson
   toggleItem(e: any, wish: wishItem) {

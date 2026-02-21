@@ -1,0 +1,13 @@
+<main class="main">
+  <h1>Ang To Do app</h1>
+
+  <h2>Input</h2>
+  <app-add-item (newToDo)="addTodo($event)"></app-add-item>
+
+  <h2>To do list</h2>
+  <app-todo-list
+    [todos]="todosList"
+    (todoDeleted)="handleTodoDeleted($event)"
+  ></app-todo-list>
+
+</main>

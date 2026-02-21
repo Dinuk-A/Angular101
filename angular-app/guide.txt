@@ -1,0 +1,25 @@
+kalman web designs video - 45 min
+
+src>main.ts 
+ this is the starting point of ng app
+
+inde.html 
+ this is the page rendered in to frontend
+
+src>app 
+ where the root component is at
+
+ public folder > add images
+
+ to start fresh, 
+ 1 go to app.html and delete everything 
+ if we need multi page app, delete everything except <router-outlet/>
+2 go to app.ts and delete the import of router-outlet
+
+to create a new component > ng generate component add-item
+
+[] is for property binding
+() for event binding
+
+@Input === recieve data from parent element
+@Output === send data back parent element
