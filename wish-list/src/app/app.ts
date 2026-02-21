@@ -4,7 +4,10 @@ import { wishItem } from './shared/models/wishItem';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
+//@Component is a decorator, it gives us info about the component, how this component is gointg to be used...etc
 @Component({
+
+  // a html tag with this name will be replaced by the content of this component
   selector: 'app-root',
   imports: [CommonModule, RouterOutlet, FormsModule],
   templateUrl: './app.html',

@@ -1,10 +1,14 @@
-install angular CLI globally  >   npm install @angular/cli --g
+intsall Node and NPM first, we dont need node directly, we just need the angular dev tool , npm 
 
-create a new project   >   ng new app-name-goes-here
+install angular CLI globally  >   npm install @angular/cli --g
+g == that command gives ng command
+
+create a new project   >   ng new app-name-goes-here (ng new wishlist)
 answers to optional questions > rorting = default NO, styles = CSS
 cd into that newe folder
 
-to start app , in cmd > 1. ng serve 
+to start app (first time) , in cmd > 1. ng serve 
+if for the first time after cloned into a new pc> first do npm install
 
 no definite structure for folder structure
 
