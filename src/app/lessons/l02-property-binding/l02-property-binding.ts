@@ -16,6 +16,14 @@ export class PropertyBindingLesson {
 
   textToShow = "Hello World";
 
+  user ={
+    name: "Dinuka",
+    isPremium:false,
+    age:27    
+  }
+
+  username="";
+
   //below var wil be used to show the diff between interpolation
   imgUrlFromInterpolation = "https://picsum.photos/200";
 

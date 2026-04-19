@@ -1,10 +1,26 @@
 <p>l02-property-binding works!</p>
-<button [disabled]="isDisabled" [name]="btnName">Inspect  me</button>
+
+<button [disabled]="isDisabled" [name]="btnName">Inspect me</button>
 <br>
 <img [src]="imgUrl" [alt]="imgAltValue">
 <p [textContent]="textToShow"></p>
 
 <div>
+    <p>Property Binding with Object data</p>
+
+    <button [disabled]="user.age < 18">Buy Alcohol</button>
+
+    <p [textContent]="user.isPremium? 'Hey Boss':'Just Hey'"></p>
+
+    <p>Inspect below this line to see hidden button</p>
+    <button [hidden]="username.length==0">Logout</button>
+</div>
+
+<!-- to show the difference between interpolation and property binding we can use the below code snippet. In interpolation the value will be converted to string and assigned to the attribute but in property binding the value will be assigned to the actual DOM element property. So in interpolation img src will be assigned as a string but in property binding it will be assigned to the src property of the img element. So in interpolation if we assign a non string value it will be converted to string but in property binding it will not work if we assign a non string value to a string property. -->
+<div>
     <p>Image from interpolation</p>
     <img src="{{imgUrlFromInterpolation}}" alt="">
 </div>
+
+
+<!-- property binding also supports expressions inside it -->
