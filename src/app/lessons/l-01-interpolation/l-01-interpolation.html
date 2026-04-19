@@ -1,13 +1,27 @@
 <p>l-01-interpolation works!</p>
 
 <div>
+    <!-- display plain values -->
     <p>Name fetched from component: {{name}}</p>
+
+    <!-- display expressions -->
     <p>Name modified: {{name.toUpperCase()}}</p>
     <p>Real age: {{age + 2}}</p>
+    <p>Max age: {{maxAge}}</p>
+
+    <!-- display boolean values -->
+    <p>Is adult: {{isAdult ? "yes":"No"}}</p>
+
+    <!-- display object values -->
+    <p>User name: {{user.name}}</p>
+    <p>User age: {{user.age}}</p>
 </div>
 
+<!-- display method results -->
 <div class="">
     <p>A function running inside div 👇</p>
     {{greet()}}
 </div>
 
+<!-- display values from arrays -->
+ <p>Second color: {{colors[1]}}</p>
