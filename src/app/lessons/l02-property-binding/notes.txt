@@ -1,0 +1,6 @@
+Interpolation → inside element content
+<p>{{ name }}</p>
+
+Property binding → inside element properties
+<input [value]="name">
+<img [src]="imageUrl">

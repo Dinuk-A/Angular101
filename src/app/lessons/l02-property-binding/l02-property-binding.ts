@@ -6,6 +6,21 @@ import { Component } from '@angular/core';
   templateUrl: './l02-property-binding.html',
   styleUrl: './l02-property-binding.css',
 })
-export class L02PropertyBinding {
+export class PropertyBindingLesson {
+  
+  isDisabled = true;
+  btnName="Dinuka";
+
+  imgUrl = "https://picsum.photos/200/300";
+  imgAltValue = "A Random Img"
+
+  textToShow = "Hello World";
+
+  //below var wil be used to show the diff between interpolation
+  imgUrlFromInterpolation = "https://picsum.photos/200";
 
 }
+
+
+//property binding seems as same as interpolation but when inspected in devtoolswe can see the actual DOM element has the property
+//and it only support for actual DOM element properties only
