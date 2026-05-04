@@ -1,0 +1,40 @@
+<p>l04-templatesyntaxes works!</p>
+
+<h3>If else examples</h3>
+<div>
+    @if (isServerOn) {
+    <span> Server is running </span>
+    } @else {
+    <span> Server is down </span>
+    }
+</div>
+
+<div>
+    @if (dayNumber == 6) {
+    <span>Its saturday</span>
+    } @else if ( dayNumber == 7) {
+    <span>Its sunday</span>
+    } @else {
+    <span>Its not weekend yet</span>
+    }
+</div>
+
+<h3>For loops examples</h3>
+<div>Users</div>
+<!-- use 'track' to identify the items when the list has changed-->
+<ul>
+    @for (user of users; track user.id) {
+    <li>{{user.name}}</li>
+    }
+    <li>Hardcoded user</li>
+</ul>
+
+<!--  if the list doesnt have a numeric value like id, use the item itself,
+  index is a built in var provided with @for  -->
+<ul>
+    @for (f of fruits; track f; let i = $index) {
+    <div>{{i+1}} - {{f}}</div>
+    }
+    <!-- if the list has no elements -->
+    @empty {<p>No fruits in the basket</p>}
+</ul>

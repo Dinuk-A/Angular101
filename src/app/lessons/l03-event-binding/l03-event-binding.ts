@@ -10,6 +10,7 @@ export class EventBindingLesson {
 
   //1
   count = 0;
+  
   incrementCount() {
     this.count++;
   }

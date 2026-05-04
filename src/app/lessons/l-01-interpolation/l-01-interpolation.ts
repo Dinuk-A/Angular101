@@ -31,6 +31,8 @@ export class InterpolationLesson {
   //display array values
   colors = ["red", "blue", "green"];
 
+  todayDate = new Date;
+
   //we cannot show if , for loop kinda expressions using this
 
 }
