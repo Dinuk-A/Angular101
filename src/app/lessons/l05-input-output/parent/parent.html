@@ -1,4 +1,10 @@
 <p>parent works!</p>
+
+<!-- INPUT -->
 <!-- to use the below code snippet, child component needed to be imported from parent.ts -->
  <!-- and the property('username') need to be declared in child as an input  -->
-<app-child username="Dinuka" [movie]="movieName" [year]="movieYear" ></app-child>
+<app-child username="Dinuka" [movie]="movieName" [year]="movieYear" (msgEvent)="recieveMsgFromChild($event)" (countChanged)="updateCount($event)"></app-child>
+
+<!-- (msgEvent)="recieveMsgFromChild($event) and the below line are for output example -->
+ <p>{{displayingMsg}}</p>
+ <p>{{displayingCount}}</p>
