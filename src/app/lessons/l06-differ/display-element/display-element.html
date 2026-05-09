@@ -1,0 +1,15 @@
+<p>display-element works!</p>
+
+@defer () {<app-heavy-element/>}
+@placeholder {<p>Heavy element will load soon</p>}
+@loading{<p>This will display while element loading, this could be an animation </p>}
+
+
+<!-- use defer(on viewport) to display the component only after user has scrolled to that section -->
+ <!-- more == on idle, on interaction -->
+
+<!-- use loading(after 200ms) to show the loading msg after the given time if the element hasnt loaded yet  -->
+
+<!-- use loading(minimum 2s)to show the loading msg at least this much of time to prevent fast flickering -->
+
+<!-- placeholder also has minimum parameter to prevent flicker -->
